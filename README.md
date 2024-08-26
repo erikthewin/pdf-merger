@@ -8,19 +8,20 @@ Features
 - In-Memory Processing: All file processing is done in-memory for faster and safer file handling.
 - Real-Time Flash Messages: User-friendly error handling with flash messages.
 
-Demo
+## Demo ##
 
-Installation
+## Installation ##
 
 To set up the app on your local machine, follow these steps:
-Prerequisites
+
+### Prerequisites ###
 
 Make sure you have the following installed:
 
         Python 3.x
         pip (Python package manager)
     
-## Setup ##
+### Setup ###
 
 1. Clone the repository:
    
@@ -48,3 +49,38 @@ Create a .env file in the root directory and add your secret key:
 
 6. Open your browser and go to http://127.0.0.1:5000/ to access the app.
 
+### Usage ###
+
+    Upload Files: Drag and drop or select multiple PDF or image files (JPG, JPEG).
+    Merge Files: Once the files are uploaded, they will be merged into a single PDF document.
+    View Merged PDF: The merged PDF will be displayed in the browser for preview or download.
+
+### File Types Supported ###
+
+    PDF files (.pdf)
+    Images (.jpg, .jpeg)
+
+### Project Structure ###
+
+        pdf-image-merger-app/
+        │
+        ├── app.py              # Main application file
+        ├── templates/
+        │   └── index.html      # HTML template for the UI
+        ├── static/             # Static assets like CSS, JS (if needed)
+        ├── requirements.txt    # Python dependencies
+        └── README.md           # Project documentation
+
+### Contributing ###
+
+Contributions are welcome! Please fork the repository, make your changes, and submit a pull request.
+
+### License ###
+
+This project is licensed under the MIT License. See the LICENSE file for more information.
+
+### Acknowledgements ###
+
+    Flask - Web framework
+    PyPDF2 - PDF handling
+    Pillow - Image processing
