@@ -10,6 +10,9 @@ Features
 
 ## Demo ##
 
+![billede](https://github.com/user-attachments/assets/1d329d7c-2289-45cb-9e5c-e2c2e4a8e535)
+
+
 ## Installation ##
 
 To set up the app on your local machine, follow these steps:
