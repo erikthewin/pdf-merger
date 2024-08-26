@@ -18,26 +18,25 @@ To set up the app on your local machine, follow these steps:
 
 Make sure you have the following installed:
 
-        Python 3.x
-        pip (Python package manager)
+        Python 3.x (if not running with docker)
+        pip (Python package manager) (if not running with docker)
         Docker (optional)
 
 ### Setup with docker ###
 
-Create a .env file (optional but recommended)
+1. Create a .env file
 
 If your Flask application relies on environment variables (e.g., for configuration or secrets), create a .env file in your project root (same directory as the Dockerfile). Add your key-value pairs in this format:
 
-        FLASK_ENV=development
         SECRET_KEY=your_secret_key
 
-Build the Docker Image
+2. Build the Docker Image
 
 Open a terminal in the project directory (where your Dockerfile is located) and build the Docker image:
 
         docker build -t flask-app .
 
-Run the Docker Container
+3. Run the Docker Container
 
 To run the Docker container, use the following command:
 
@@ -49,7 +48,7 @@ This command does the following:
     -p 5000:5000: Maps port 5000 on your local machine to port 5000 on the container (where Flask will be running).
     flask-app: The name of the Docker image built in the previous step.
 
-Access the Application
+4. Access the Application
 
 Once the container is running, you can access your Flask application by navigating to http://localhost:5000 in your web browser.
     
