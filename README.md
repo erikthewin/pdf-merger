@@ -20,8 +20,40 @@ Make sure you have the following installed:
 
         Python 3.x
         pip (Python package manager)
+        Docker (optional)
+
+### Setup with docker ###
+
+Create a .env file (optional but recommended)
+
+If your Flask application relies on environment variables (e.g., for configuration or secrets), create a .env file in your project root (same directory as the Dockerfile). Add your key-value pairs in this format:
+
+        FLASK_ENV=development
+        SECRET_KEY=your_secret_key
+
+Build the Docker Image
+
+Open a terminal in the project directory (where your Dockerfile is located) and build the Docker image:
+
+        docker build -t flask-app .
+
+Run the Docker Container
+
+To run the Docker container, use the following command:
+
+        docker run --env-file .env -p 5000:5000 flask-app
+
+This command does the following:
+
+    --env-file .env: Loads environment variables from your .env file into the container.
+    -p 5000:5000: Maps port 5000 on your local machine to port 5000 on the container (where Flask will be running).
+    flask-app: The name of the Docker image built in the previous step.
+
+Access the Application
+
+Once the container is running, you can access your Flask application by navigating to http://localhost:5000 in your web browser.
     
-### Setup ###
+### Setup without docker ###
 
 1. Clone the repository:
    
@@ -47,7 +79,7 @@ Create a .env file in the root directory and add your secret key:
 
         python app.py
 
-6. Open your browser and go to http://127.0.0.1:5000/ to access the app.
+6. Open your browser and go to http://localhost:5000/ to access the app.
 
 ### Usage ###
 
@@ -67,7 +99,6 @@ Create a .env file in the root directory and add your secret key:
         ├── app.py              # Main application file
         ├── templates/
         │   └── index.html      # HTML template for the UI
-        ├── static/             # Static assets like CSS, JS (if needed)
         ├── requirements.txt    # Python dependencies
         └── README.md           # Project documentation
 
