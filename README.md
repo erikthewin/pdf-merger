@@ -1,4 +1,4 @@
-#PDF and Image Merger App#
+# PDF and Image Merger App #
 
 This is a Flask-based web application that allows users to merge multiple PDF files and images (JPG, JPEG) into a single PDF document. The app is designed for easy use and runs locally on your machine.
 Features
@@ -20,7 +20,7 @@ Make sure you have the following installed:
         Python 3.x
         pip (Python package manager)
     
-##Setup##
+## Setup ##
 
 1. Clone the repository:
    
